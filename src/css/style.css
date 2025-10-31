@@ -1,0 +1,277 @@
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background: #f5f6fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    background: linear-gradient(135deg, #005bea, #00c6fb);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: #fff;
+    border-bottom: 2px solid #e3e3e3;
+    text-align: center;
+    padding: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+nav a {
+    background-color: #005bea;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #007cff;
+    transform: translateY(-1px);
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    margin: 0.2rem;
+}
+
+.btn-blue {
+    background-color: #005bea;
+    color: white;
+}
+.btn-blue:hover {
+    background-color: #007cff;
+}
+
+.btn-gray {
+    background-color: #6c757d;
+    color: white;
+}
+.btn-gray:hover {
+    background-color: #7f8c8d;
+}
+
+.btn-red {
+    background-color: #dc3545;
+    color: white;
+}
+.btn-red:hover {
+    background-color: #e55361;
+}
+
+body > hr {
+    margin: 0;
+    border: none;
+    border-bottom: 2px solid #ddd;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    text-align: center;
+}
+
+button, input[type="submit"], input[type="button"] {
+    background: #005bea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+    margin: 0.3rem auto;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #007cff;
+    transform: translateY(-1px);
+}
+
+form {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    max-width: 400px;
+    text-align: left;
+    align-items: stretch;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00aaff;
+    box-shadow: 0 0 3px rgba(0, 170, 255, 0.5);
+}
+
+p {
+    line-height: 1.5;
+}
+
+p.error {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+p.success {
+    color: #28a745;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+}
+
+ul li {
+    margin: 0.5rem 0;
+}
+
+ul li a {
+    display: block;
+    background: #eef5ff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #004aad;
+    transition: background 0.2s;
+}
+
+ul li a:hover {
+    background: #dcecff;
+}
+
+.audiolist {
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #fefefe;
+    display: inline-block;
+    text-align: left;
+}
+
+.audiolist h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    color: #004aad;
+    text-align: center;
+}
+
+.track, .podcast {
+    padding: 0.7rem;
+    border-bottom: 1px solid #eee;
+}
+
+.track:last-child, .podcast:last-child {
+    border-bottom: none;
+}
+
+.track.compact strong, .podcast.compact strong {
+    color: #005bea;
+}
+
+audio {
+    width: 100%;
+    margin-top: 0.4rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-top: 2px solid #ddd;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+footer .footer-left, footer .footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+footer .footer-divider {
+    width: 2px;
+    height: 40px;
+    background-color: #ccc;
+    margin: 0 1rem;
+}
+
+@media (max-width: 700px) {
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 90%;
+        margin: 0.3rem auto;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    footer .footer-divider {
+        display: none;
+    }
+
+    footer .footer-left, footer .footer-right {
+        text-align: center;
+    }
+}
