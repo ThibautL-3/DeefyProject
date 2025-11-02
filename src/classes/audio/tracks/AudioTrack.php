@@ -8,7 +8,7 @@ class AudioTrack
 {
     protected string $titre;
     protected ?string $auteur = null;
-    protected ?int $annee = null;
+    protected $annee = null;
     protected ?string $genre = null;
     protected int $duree = 0;
     protected string $fichier;

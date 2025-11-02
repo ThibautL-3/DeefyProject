@@ -39,7 +39,7 @@ class AddPodcastTrackAction extends Action
                     <input type="text" id="genre" name="genre" title="test"><br>
                     
                      <label for="annee">Année :</label>
-                    <input type="number" id="annee" name="annee" min="1900" max="2100"><br>
+                    <input type="date" id="annee" name="annee"><br>
 
                     <label for="fichier">Fichier MP3 :</label>
                     <input type="file" id="fichier" name="fichier" accept=".mp3" required><br>
@@ -58,7 +58,7 @@ class AddPodcastTrackAction extends Action
         $titre = filter_var($_POST['titre'] ?? '', FILTER_SANITIZE_SPECIAL_CHARS);
         $auteur = filter_var($_POST['auteur'] ?? '', FILTER_SANITIZE_SPECIAL_CHARS);
         $genre = filter_var($_POST['genre'] ?? '', FILTER_SANITIZE_SPECIAL_CHARS);
-        $annee = (int)($_POST['annee'] ?? 0);
+        $annee = ($_POST['annee'] ?? 0);
 
         if (!isset($_FILES['fichier']) || $_FILES['fichier']['error'] !== UPLOAD_ERR_OK)
             return "<p>Erreur : fichier manquant.</p>";
@@ -81,7 +81,7 @@ class AddPodcastTrackAction extends Action
 
         $track->setDuree($duree);
         $track->setAuteur($auteur);
-        $track->setAnnee($annee);
+        $track->setDatePodcast($annee);
         $track->setGenre($genre);
 
         $repo = DeefyRepository::getInstance();

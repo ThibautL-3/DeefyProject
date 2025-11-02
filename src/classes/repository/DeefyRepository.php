@@ -80,7 +80,7 @@ class DeefyRepository
             ':annee_album' => $track instanceof AlbumTrack ? $track->__get('annee') : null,
             ':numero_album' => $track instanceof AlbumTrack ? $track->__get('numero') : null,
             ':auteur_podcast' => $track instanceof PodcastTrack ? $track->__get('auteur') : null,
-            ':date_posdcast' => $track instanceof PodcastTrack ? $track->__get('annee') : null,
+            ':date_posdcast' => $track instanceof PodcastTrack ? $track->getDatePodcast() : null,
         ];
 
         $stmt->execute($params);
@@ -129,6 +129,7 @@ class DeefyRepository
             } else {
                 $t = new PodcastTrack($tr['titre'], $tr['filename']);
                 $t->setAuteur($tr['auteur_podcast'] ?? '');
+                $t->setDatePodcast($tr['date_posdcast'] ?? '');
             }
             $t->setGenre($tr['genre'] ?? '');
             $t->setDuree((int)$tr['duree']);

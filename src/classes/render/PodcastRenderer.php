@@ -15,7 +15,13 @@ class PodcastRenderer extends AudioTrackRenderer
     {
         $titre = htmlspecialchars($this->track->__get('titre'));
         $auteur = htmlspecialchars($this->track->__get('auteur') ?? 'Unknown');
-        return "<div class=\"podcast compact\"><strong>{$titre}</strong> — {$auteur}</div>";
+        $date = htmlspecialchars($this->track->getDatePodcast() ?? 'Date inconnue');
+        $f = $this->audioTag();
+
+        return "<div class=\"podcast compact\">
+                <p><strong>{$titre}</strong> — {$auteur}</p>
+                {$f}
+            </div>";
     }
 
     protected function renderLong(): string
