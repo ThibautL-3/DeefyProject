@@ -16,7 +16,7 @@ class Dispatcher
     public function run(): void {
         if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 
-        DeefyRepository::setConfig(__DIR__ . '/../../../config/db.config.ini');
+        DeefyRepository::setConfig('/users/home/e10106u/config/db.config.ini');
         $repo = DeefyRepository::getInstance();
 
         $action = $_GET['action'] ?? 'default';
