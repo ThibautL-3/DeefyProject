@@ -1,10 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: "Segoe UI", Roboto, sans-serif;
     background: #f5f6fa;
-    margin: 0;
-    padding: 0;
     color: #333;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -87,13 +93,15 @@ body > hr {
 }
 
 main {
+    flex: 1;
     max-width: 900px;
+    width: 100%;
     margin: 2rem auto;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     padding: 2rem;
-    text-align: center;
+    box-sizing: border-box;
 }
 
 button, input[type="submit"], input[type="button"] {
@@ -114,10 +122,10 @@ button:hover, input[type="submit"]:hover {
 }
 
 form {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    margin-top: 1rem;
+    margin: 1rem auto;
     max-width: 400px;
     text-align: left;
     align-items: stretch;
@@ -220,7 +228,7 @@ footer {
     background: white;
     border-top: 2px solid #ddd;
     padding: 1rem 2rem;
-    margin-top: 2rem;
+    margin-top: auto;
     font-weight: 500;
     font-size: 1rem;
     color: #333;
